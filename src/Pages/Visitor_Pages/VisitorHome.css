@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  background-color: #fdf6ec;
+  font-family: 'Arial', sans-serif;
+}
+
+.visitor-home {
+  padding: 20px;
+  background-color: #fdf6ec;
+}
+
+.visitor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 12px;
+  background-color: #fdf6ec;
+}
+
+.menu-icon,
+.profile-icon {
+  font-size: 24px;
+  padding: 8px;
+  border-radius: 50%;
+  color: black;
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #9BAE87;
+}
+
+.discover-text {
+  text-align: center;
+  color: #F4A261;
+  font-size: 26px;
+  margin: 30px 0;
+}
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.restaurant-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  background-color: white;
+}
+
+.restaurant-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.stars span {
+  color: gold;
+  font-size: 18px;
+}

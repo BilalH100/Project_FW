@@ -1,0 +1,121 @@
+.landing-page {
+  font-family: 'Arial', sans-serif;
+  background-color: #FDF6EC;
+  text-align: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+.landing-main {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.landing-header h1 {
+  font-size: 2.5rem;
+  color: #4E3629;
+  margin: 0;
+}
+
+.subtitle {
+  color: #777;
+  margin-bottom: 40px;
+}
+
+.landing-main .btn {
+  margin: 15px auto;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  width: 220px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.consumer {
+  background-color: #F29E4C;
+  color: #fff;
+}
+.consumer:hover {
+  background-color: #d17c33;
+}
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.visitor-link {
+  text-decoration: none; /* enlève le soulignement */
+}
+
+.vendor {
+  background-color: #A3C7A3;
+  color: #fff;
+}
+.vendor:hover {
+  background-color: #8bb58a;
+}
+
+.visitor {
+  background-color: #4E3629;
+  color: #fff;
+}
+.visitor:hover {
+  background-color: #38261C;
+}
+.visitor-link {
+  text-decoration: none; 
+}
+.mission-section {
+  background-color: #fff4e6;
+  padding: 30px 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.mission-text {
+  color: #f29e4c;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.landing-footer {
+  margin-top: 60px;
+  font-size: 0.9rem;
+  color: #4E3629;
+  background-color: #fff7ea;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+
+.contact-info span {
+  font-size: 0.95rem;
+}
+
+.green {
+  color: #4caf50;
+  font-weight: bold;
+}
+
