@@ -1,12 +1,19 @@
+// src/Pages/LandingPage.js
 import React from 'react';
 import './LandingPage.css';
 import { Link } from 'react-router-dom';
+import Header from '../../Layouts/Header';
+import Footer from '../../Layouts/Footer';
+import logo from '../../Assets/Images/LOGO9.png'; 
+
 
 const LandingPage = () => {
   return (
     <div className="landing-page">
+      <Header />
+
       <header className="landing-header">
-        <img src="/logo.svg" alt="Logo" className="logo" />
+        <img src={logo} alt="Logo" className="logo" />
         <h1>Too Good To Go Morocco</h1>
         <p className="subtitle">Fighting food waste with surprise food boxes</p>
       </header>
@@ -19,28 +26,29 @@ const LandingPage = () => {
           <button className="btn vendor" onClick={() => window.location.href = "/vendor"}>
             I’m a Vendor
           </button>
-          <Link to="/visitor" className="visitor-link">
-            <button className="btn visitor">Continue as Visitor</button>
-          </Link>
+          <button
+  className="btn visitor"
+  onClick={() => {
+    localStorage.setItem('isGuest', 'true');
+    window.location.href = "/visitor";
+  }}
+>
+  Continue as Visitor
+</button>
+
         </div>
 
         <section className="mission-section">
           <p className="mission-text">
-            We’re on a mission to reduce food waste by offering surprise mystery boxes filled with surplus goodies. Join us in making a positive impact on the planet while enjoying delicious surprises!
+            We’re on a mission to reduce food waste by offering surprise mystery boxes filled with surplus goodies.
           </p>
         </section>
       </main>
 
-      <footer className="landing-footer">
-        <div className="contact-info">
-          <span>📧 TooGoodToGo@gmail.com</span>
-          <span>📞 (212)666666666</span>
-          <span>📍 1234 Elm St, Casa Blanca, Morocco</span>
-        </div>
-        <p className="copyright">© 2025 Too Good To Go. <span className="green">All rights reserved.</span></p>
-      </footer>
+      <Footer />
     </div>
   );
 };
+
 
 export default LandingPage;

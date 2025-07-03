@@ -1,9 +1,12 @@
+// src/Pages/Visitor_Pages/VisitorHome.js
 import React from 'react';
 import './VisitorHome.css';
+import Header from '../../Layouts/Header';
+import Footer from '../../Layouts/Footer';
 
 const restaurants = [
   {
-    name: 'La Doze Restaurent',
+    name: 'La Doze Restaurant',
     logo: '/images/ladoze.png',
     rating: 4,
   },
@@ -38,25 +41,35 @@ const VisitorHome = () => {
   };
 
   return (
-    <div className="visitor-home">
-      <header className="visitor-header">
-        <span className="menu-icon">☰</span>
-        <span className="header-title">Welcome Visitor</span>
-        <span className="profile-icon">👤</span>
-      </header>
+    <>
+      <Header />
 
-      <h3 className="discover-text">Discover The<br />Unexpected</h3>
+      <div className="visitor-home">
+        <header className="visitor-header">
+          <span className="menu-icon">☰</span>
+          <span className="header-title">Welcome Visitor</span>
+          <span className="profile-icon">👤</span>
+        </header>
 
-      <div className="restaurant-grid">
-        {restaurants.map((restaurant, index) => (
-          <div className="restaurant-card" key={index}>
-            <img src={restaurant.logo} alt={restaurant.name} className="restaurant-logo" />
-            <h4>{restaurant.name}</h4>
-            <div className="stars">{renderStars(restaurant.rating)}</div>
-          </div>
-        ))}
+        <h3 className="discover-text">Discover The<br />Unexpected</h3>
+
+        <div className="guest-message">
+          You’re browsing as a guest. <a href="/landing">Create an account</a> for full access.
+        </div>
+
+        <div className="restaurant-grid">
+          {restaurants.map((restaurant, index) => (
+            <div className="restaurant-card" key={index}>
+              <img src={restaurant.logo} alt={restaurant.name} className="restaurant-logo" />
+              <h4>{restaurant.name}</h4>
+              <div className="stars">{renderStars(restaurant.rating)}</div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+
+      <Footer />
+    </>
   );
 };
 

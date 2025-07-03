@@ -1,0 +1,19 @@
+/* src/Pages/IntroPage.css */
+
+.intro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #9BAE87;
+  font-size: 3rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #FDF6EC;
+  gap: 0.6rem;
+  position: relative;
+}
+
+.intro-word {
+  position: relative;
+}

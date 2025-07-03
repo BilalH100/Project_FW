@@ -65,3 +65,19 @@ body {
   color: gold;
   font-size: 18px;
 }
+.guest-message {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #F4A261;
+  font-size: 16px;
+}
+
+.guest-message a {
+  color: #F29E4C;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.guest-message a:hover {
+  text-decoration: underline;
+}
