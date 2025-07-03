@@ -1,0 +1,44 @@
+.header1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #fdf6ec;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  user-select: none;
+}
+
+.menu-button {
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.title {
+  margin: 0;
+  font-weight: bold;
+  color: #9BAE87;
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  user-select: none;
+}
+
+.profile-button {
+  font-size: 24px;
+  color: #5a2a7e;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,44 @@
+/* Conteneur du bouton profil */
+.profile-wrapper {
+  position: relative;
+}
+
+/* Bouton 👤 */
+.profile-button {
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Menu déroulant */
+.profile-menu {
+  position: absolute;
+  top: 50px; /* en dessous du header */
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  width: 160px;
+  z-index: 1200;
+  padding: 8px 0;
+}
+
+/* Chaque option du menu */
+.menu-item {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Survol des options */
+.menu-item:hover {
+  background-color: #f4f4f4;
+}

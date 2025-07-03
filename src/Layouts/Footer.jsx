@@ -1,4 +1,5 @@
 import React from 'react';
+import './Footer.css';
 
 export default function Footer() {
   return (
@@ -8,10 +9,7 @@ export default function Footer() {
         <span>📞 (212)666666666</span>
         <span>📍 1234 Elm St, Casa Blanca, Morocco</span>
       </div>
-      <p className="copyright">
-        © 2025 Too Good To Go. <span className="green">All rights reserved.</span>
-      </p>
+      <p className="footer-copy">© 2025 Too Good To Go. <span className="green">All rights reserved.</span></p>
     </footer>
   );
 }
-

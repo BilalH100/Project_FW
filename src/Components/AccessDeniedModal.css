@@ -1,0 +1,90 @@
+.access-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.access-modal-content {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px 25px;
+  width: 340px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.access-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.access-modal-icon {
+  font-size: 36px;
+  color: #f44336;
+  margin-bottom: 10px;
+}
+
+.access-modal-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.access-modal-text {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.access-modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-login,
+.btn-signup {
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-login {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-login:hover {
+  transform: scale(1.05);
+  background-color: #0056d2;
+}
+
+.btn-signup {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.btn-signup:hover {
+  transform: scale(1.05);
+  background-color: #1f9236;
+}

@@ -4,7 +4,7 @@ import './LandingPage.css';
 import { Link } from 'react-router-dom';
 import Header from '../../Layouts/Header';
 import Footer from '../../Layouts/Footer';
-import logo from '../../Assets/Images/LOGO9.png'; 
+import logo from '../../Assets/Images/Logo_.jpg'; 
 
 
 const LandingPage = () => {
