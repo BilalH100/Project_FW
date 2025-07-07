@@ -12,8 +12,7 @@
   "bugs": {
     "url": "https://github.com/BilalH100/Project_FW/issues"
   },
-  "homepage":  "."
-,
+  "homepage": "http://.",
   "scripts": {
     "start": "cross-env BROWSER=chrome react-scripts start",
     "build": "react-scripts build",
@@ -28,8 +27,13 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
+    "cors": "^2.8.5",
     "cross-env": "^7.0.3",
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
     "framer-motion": "^12.23.0",
+    "mongodb": "^6.17.0",
+    "mongoose": "^8.16.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.3",
@@ -53,5 +57,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "keywords": []
 }

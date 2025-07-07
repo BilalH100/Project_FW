@@ -1,51 +1,53 @@
-// src/Pages/IntroPage.js
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import './IntroPage.css';
+import { useNavigate } from 'react-router-dom';
 
-const phrases = ['Too', 'Good', 'To', 'Go'];
+const letters = "MINIMO".split('');
 
-export default function IntroPage() {
-  const [step, setStep] = useState(0);
+const IntroPage = () => {
+  const controls = useAnimation();
   const navigate = useNavigate();
 
   useEffect(() => {
-    setStep(0); // <-- Reset step when page is refreshed or mounted
+    const timer = setTimeout(() => {
+      controls.start({
+        y: "-100vh",
+        transition: { duration: 1, ease: "easeInOut" }
+      });
+    }, 2500);
 
-    const interval = setInterval(() => {
-      setStep((prev) => prev + 1);
-    }, 700);
-
-    const redirect = setTimeout(() => {
+    const redirectTimer = setTimeout(() => {
       navigate('/landing');
     }, 3500);
 
     return () => {
-      clearInterval(interval);
-      clearTimeout(redirect);
+      clearTimeout(timer);
+      clearTimeout(redirectTimer);
     };
-  }, [navigate]);
+  }, [controls, navigate]);
 
   return (
-    <div className="intro-container">
-      {phrases.slice(0, step + 1).map((word, index) =>
-        index === step ? (
+    <motion.div
+      className="intro-motion-container"
+      animate={controls}
+      initial={{ y: 0 }}
+    >
+      <div className="letter-row">
+        {letters.map((letter, index) => (
           <motion.span
             key={index}
+            className="motion-letter"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="intro-word"
+            transition={{ delay: index * 0.3, duration: 0.6 }}
           >
-            {word}
+            {letter}
           </motion.span>
-        ) : (
-          <span key={index} className="intro-word">
-            {word}
-          </span>
-        )
-      )}
-    </div>
+        ))}
+      </div>
+    </motion.div>
   );
-}
+};
+
+export default IntroPage;

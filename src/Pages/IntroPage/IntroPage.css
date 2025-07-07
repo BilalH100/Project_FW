@@ -1,19 +1,20 @@
-/* src/Pages/IntroPage.css */
-
-.intro-container {
+.intro-motion-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #A3B18A;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #9BAE87;
-  font-size: 3rem;
-  font-weight: bold;
-  font-style: italic;
-  color: #FDF6EC;
-  gap: 0.6rem;
-  position: relative;
+  overflow: hidden;
 }
 
-.intro-word {
-  position: relative;
+.letter-row {
+  display: flex;
+  gap: 0.3em;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.motion-letter {
+  color: #F5F5F5;
 }

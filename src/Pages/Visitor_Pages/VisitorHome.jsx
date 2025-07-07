@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './VisitorHome.css';
 import Footer from '../../Layouts/Footer';
 import MenuBar from '../../Components/MenuBar';
 import Header1 from '../../Layouts/Header1';
 import AccessDeniedModal from '../../Components/AccessDeniedModal';
+import VisitorNotification from '../../Components/VisitorNotification';
 
 const restaurants = [
   { name: 'La Doze Restaurant', logo: '/images/ladoze.png', rating: 4 },
@@ -17,6 +18,26 @@ const restaurants = [
 const VisitorHome = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showAccessModal, setShowAccessModal] = useState(false);
+  const [showNotification, setShowNotification] = useState(false);
+
+  const isGuest = localStorage.getItem('isGuest') === 'true';
+
+  useEffect(() => {
+    if (isGuest) {
+      setShowNotification(true);
+    }
+
+    fetch('http://localhost:5000/visitor', {
+      credentials: 'include'
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log("👤 ID du visiteur :", data.visitorId);
+      })
+      .catch(error => {
+        console.error("Erreur lors de l'appel à /visitor :", error);
+      });
+  }, []);
 
   const closeMenu = () => setShowMenu(false);
 
@@ -78,9 +99,9 @@ const VisitorHome = () => {
       >
         <h3 className="discover-text">Discover The<br />Unexpected</h3>
 
-        <div className="guest-message">
-          You’re browsing as a guest. <a href="/landing">Create an account</a> for full access.
-        </div>
+        {isGuest && showNotification && (
+  <VisitorNotification onClose={() => setShowNotification(false)} />
+)}
 
         <div className="restaurant-grid">
           {restaurants.map((restaurant, index) => (
@@ -97,6 +118,10 @@ const VisitorHome = () => {
 
       {showAccessModal && (
         <AccessDeniedModal onClose={() => setShowAccessModal(false)} />
+      )}
+
+      {showNotification && (
+        <VisitorNotification onClose={() => setShowNotification(false)} />
       )}
     </div>
   );
