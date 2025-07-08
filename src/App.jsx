@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'r
 import IntroPage from './Pages/IntroPage/IntroPage';
 import LandingPage from './Pages/Landing_Page/LandingPage';
 import VisitorHome from './Pages/Visitor_Pages/VisitorHome';
+import Login from './Pages/LoginPage/Login'; 
+import Signup from './Pages/SignUpPage/signup';
 
 const AppRoutes = () => {
   const location = useLocation();
@@ -14,7 +16,9 @@ const AppRoutes = () => {
       <Route path="/intro" element={<IntroPage />} />
       <Route path="/landing" element={<LandingPage />} />
       <Route path="/visitor" element={<VisitorHome />} />
-    </Routes>
+      <Route path="/consumer" element={<Login />} /> 
+      <Route path="/signup" element={<Signup />} />
+      </Routes>
   );
 };
 
